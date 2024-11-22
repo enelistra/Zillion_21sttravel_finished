@@ -300,6 +300,34 @@
                 font-size: 16px; /* Adjust font size */
                 line-height: 1.6; /* Space between lines */
             }
+            #contact {
+                background-image: url("./static/carousal/pop.jpg");
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+        
+            @media (max-width: 768px) {
+                #contact {
+                    /* Switch to a scrollable background for mobile devices */
+                    background-attachment: scroll;
+                }
+            }
+        
+            @media (max-width: 576px) {
+                #contact {
+                    /* Ensure background still shows on smaller screens */
+                    background-size: contain;
+                }
+        
+                .container {
+                    padding: 15px;
+                }
+        
+                .btn {
+                    font-size: 0.9rem;
+                }
+            }
         </style>
     </head>    
     <body>
@@ -416,9 +444,11 @@
             <div class="container text-white">
                 <div class="row align-items-center">
                     <!-- Contact Form -->
-                    <div class="col-md-">
+                    <div class="col-md-4">
                         <div class="p-4">
-                            <h2 class="text-center mb-4" style="font-family: 'Outfit', sans-serif;">GET IN TOUCH</h2>
+                            <h2 class="text-center mb-4" style="font-family: 'Outfit', sans-serif;">
+                                GET IN TOUCH
+                            </h2>
                         </div>
                     </div>
                     <!-- Contact Info -->
@@ -426,18 +456,39 @@
                         <form>
                             <div class="mb-3">
                                 <label for="name" class="form-label" style="font-family: 'Outfit', sans-serif;">Your Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    placeholder="Enter your name"
+                                />
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label" style="font-family: 'Outfit', sans-serif;">Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                />
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label" style="font-family: 'Outfit', sans-serif;">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+                                <textarea
+                                    class="form-control"
+                                    id="message"
+                                    rows="4"
+                                    placeholder="Write your message"
+                                ></textarea>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary w-100" style="font-family: 'Outfit', sans-serif;">Send Message</button>
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary w-100"
+                                    style="font-family: 'Outfit', sans-serif;"
+                                >
+                                    Send Message
+                                </button>
                             </div>
                         </form>
                     </div>
